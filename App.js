@@ -1,12 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
-import { WebView } from 'react-native-webview'
 import Login from './screens/Login'
 import React from 'react'
+import Register from './screens/Register'
 
 const App = () => {
   return (
-    <View>
-      <Login/>
+    <View styles = {{}}>
+      <Register />
     </View>
   )
 }

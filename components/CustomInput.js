@@ -1,0 +1,49 @@
+import React from 'react'
+import { StyleSheet, TextInput, View } from 'react-native'
+
+import COLORS from '../Assets/Colors'
+
+
+const CustomInput = ({ value, setValue, placeholder, secureTextEntry, iconName, isEnable = true, autoFocus = false, inputType = 'default', multiline = false, numberofLines = 1, inputStyle }) => {
+  return (
+    <View style={styles.container}>
+      <TextInput
+        autoFocus={autoFocus}
+        value={value}
+        onChangeText={setValue}
+        placeholder={placeholder}
+        style={[styles.input, styles[`input_${inputStyle}`]]}
+        secureTextEntry={secureTextEntry}
+        editable={isEnable}
+        keyboardType={inputType}
+        multiline={multiline}
+        numberOfLines={numberofLines}
+        selectionColor={COLORS.secondarylight}
+      />
+    </View>
+  )
+}
+
+export default CustomInput
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: COLORS.light,
+    borderRadius: 15,
+
+    paddingHorizontal: 10,
+
+    marginHorizontal: 10,
+    marginVertical: 10,
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  input: {
+    width: "100%",
+    paddingHorizontal: 10,
+    color: COLORS.theme,
+  },
+  input_Multiline: {
+    textAlignVertical: 'top'
+  }
+})
