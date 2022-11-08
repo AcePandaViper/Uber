@@ -31,8 +31,6 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: COLORS.light,
     borderRadius: 15,
-    borderBottomWidth: 1,
-    borderBottomColor: '#000',
     paddingHorizontal: 10,
 
     marginHorizontal: 0,

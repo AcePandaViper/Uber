@@ -21,11 +21,15 @@ const Login = () => {
             </Text>
             <View >
                 <CustomInput
+                style = {{borderBottomWidth: 1,
+    borderBottomColor: '#000',}}
                     placeholder={'Email'}
                     value={email}
                     setValue={setEmail}
                 />
                 <CustomInput
+                style = {{borderBottomWidth: 1,
+    borderBottomColor: '#000',}}
                     placeholder={'Password'}
                     value={password}
                     setValue={setPassword}
