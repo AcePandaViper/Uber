@@ -4,7 +4,7 @@ import { StyleSheet, TextInput, View } from 'react-native'
 import COLORS from '../Assets/Colors'
 
 
-const CustomInput = ({ value, setValue, placeholder, secureTextEntry, iconName, isEnable = true, autoFocus = false, inputType = 'default', multiline = false, numberofLines = 1, inputStyle }) => {
+const CustomInput = ({ value, setValue, placeholder, secureTextEntry, iconName, isEnable = true, autoFocus = false, inputType = 'default', multiline = false, numberofLines = 1, inputStyle, style }) => {
   return (
     <View style={styles.container}>
       <TextInput
@@ -12,13 +12,14 @@ const CustomInput = ({ value, setValue, placeholder, secureTextEntry, iconName, 
         value={value}
         onChangeText={setValue}
         placeholder={placeholder}
-        style={[styles.input, styles[`input_${inputStyle}`]]}
+        style={[styles.input, styles[`input_${inputStyle}`], style]}
         secureTextEntry={secureTextEntry}
         editable={isEnable}
         keyboardType={inputType}
         multiline={multiline}
         numberOfLines={numberofLines}
         selectionColor={COLORS.secondarylight}
+
       />
     </View>
   )
@@ -30,10 +31,11 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: COLORS.light,
     borderRadius: 15,
-
+    borderBottomWidth: 1,
+    borderBottomColor: '#000',
     paddingHorizontal: 10,
 
-    marginHorizontal: 10,
+    marginHorizontal: 0,
     marginVertical: 10,
     flexDirection: 'row',
     alignItems: 'center'

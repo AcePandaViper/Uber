@@ -6,7 +6,7 @@ import Register from './screens/Register'
 const App = () => {
   return (
     <View styles = {{}}>
-      <Register />
+      <Login />
     </View>
   )
 }

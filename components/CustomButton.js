@@ -2,9 +2,9 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React from 'react'
 import COLORS from '../Assets/Colors'
 
-const CustomButton = ({ onPress, text, type = "PRIMARY", container }) => {
+const CustomButton = ({ onPress, text, type = "PRIMARY", container, style }) => {
   return (
-    <TouchableOpacity onPress={onPress} style={[styles.container, styles[`container_${type}`]]}>
+    <TouchableOpacity onPress={onPress} style={[styles.container, styles[`container_${type}`], style]}>
       <View style={styles.btnTextContainer}>
         <Text style={[styles.text, styles[`text_${type}`]]}>{text}</Text>
       </View>
@@ -17,8 +17,9 @@ export default CustomButton
 const styles = StyleSheet.create({
   container: {
     padding: 6,
-    marginVertical: 5,
+    marginVertical: 20,
     marginHorizontal: 10,
+    
 
     alignItems: 'center',
     borderRadius: 30,
@@ -51,6 +52,7 @@ const styles = StyleSheet.create({
 
   text: {
     color: COLORS.theme,
+    fontWeight: 'bold'
   },
 
   text_SECONDARY: {

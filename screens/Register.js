@@ -17,37 +17,41 @@ const Register = () => {
 
             <Text style={{
                 fontWeight: 'bold', textAlign: "center", paddingTop: 30,
-                fontSize: 40, fontFamily: 'monospace', color: 'black'
+                fontSize: 40, fontFamily: 'monospace', color: '#000'
             }}>
                 Uber
             </Text>
             <View >
                 <CustomInput
-                    style={styles.input}
+
                     placeholder={'Name'}
                     value={name}
                     setValue={setName}
                 />
                 <CustomInput
-                    style={styles.input}
+
                     placeholder={'Phone'}
                     value={phone}
                     setValue={setPhone}
                 />
                 <CustomInput
-                    style={styles.input}
+
                     placeholder={'Email'}
                     value={email}
                     setValue={setEmail}
                 />
-                <CustomInput
-                    style={styles.input}
+                <CustomInput 
                     placeholder={'Password'}
                     value={password}
                     setValue={setPassword}
                     secureTextEntry
                 />
-                <CustomButton text={'Register'} />
+                <View style = {{display:'flex', alignItems: 'center'}}>
+                <CustomButton 
+                style = {{height: 40, width: 100}}
+                text={'Register'} />
+                </View>
+              
             </View>
         </View>
     )
@@ -59,8 +63,5 @@ const styles = StyleSheet.create({
     container: {
         padding: 20
     },
-    input: {
-        borderWidth: 1,
-        borderColor: '#0000'
-    }
+
 })
