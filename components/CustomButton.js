@@ -1,5 +1,7 @@
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+
+// Variables
 import COLORS from '../Assets/Colors'
 
 const CustomButton = ({ onPress, text, type = "PRIMARY", container, style }) => {
@@ -19,7 +21,7 @@ const styles = StyleSheet.create({
     padding: 6,
     marginVertical: 20,
     marginHorizontal: 10,
-    
+
 
     alignItems: 'center',
     borderRadius: 30,
